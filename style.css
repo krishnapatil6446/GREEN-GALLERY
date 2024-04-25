@@ -1,0 +1,333 @@
+@font-face {
+    font-family: neu;
+    src: url(./NeueHaasDisplayMediu.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'neu';
+}
+html, body{
+    height:100%;
+    width: 100%;
+}
+#page1{
+    min-height: 100vh;
+    width: 100%;
+    background-color:black;
+    position: relative;
+    padding: 0 2vw;
+}
+nav{
+    padding: 2vw 0vw;
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#nav-part2{
+    display:flex;
+    align-items: center;
+    gap: 1vw;
+}
+#nav-part2 h4{
+    padding: 10px 20px;
+    position: relative;
+    border: 1px solid;
+    border-radius: 50px;
+    font-weight: 500;
+    color: #ffffffbb;
+    font-size: 18px;
+    transition: all ease 0.5s;
+    overflow: hidden;
+}
+#nav-part2 h4::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width:100%;
+    background-color: white;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.5s;
+}
+#nav-part2 h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+#nav-part2 h4 a{
+    text-decoration: none;
+    color: #ffffffbb;
+    position: relative;
+    z-index: 9;
+}
+#nav-part2 h4:hover a{
+color: black;
+}
+#bulb{
+    height: 300px;
+    width:300px;
+    border-radius: 50%;
+    border: 4px solid black;
+}
+#button{
+font-size: 20px;
+margin: 20px;
+padding: 10px 20px;
+color: black;
+}
+* h4{
+    color: white;
+}
+* h1 {
+    color: white;
+}
+* h3{
+    color: white;
+}
+* h2{
+    color: white;
+}
+#logo{
+    justify-content: flex-start;
+    height: 100px;
+}
+/*END OF NAV*/
+#center{
+    height: 65vh;
+    width: 100%;
+    /* background-color: greenyellow; */
+    display:flex;
+    align-items: end;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    padding-bottom: 2.5vw;
+}
+#left h3{
+    width:25vw;
+    font-size: 1.8vw;
+    line-height: 2vw;
+}
+#center h1 {
+    font-size: 10vw;
+    text-align: right;
+    line-height: 8vw;
+}
+#page1 video {
+    position: relative;
+    border-radius: 30px;
+    margin-top: 4vw;
+    width: 100%;
+}
+#hero-shape {
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+    right: 0;
+    top: 70vh;
+}
+
+#hero-1 {
+    background-color:#28d228;
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(10px);
+    position: absolute;
+}
+
+#hero-2 {
+    background: linear-gradient(#28d228, rgb(103, 163, 14));
+
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    position: absolute;
+    animation-name: anime2;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    filter: blur(25px);
+}
+
+#hero-3 {
+    background: linear-gradient(#28d228,rgb(72, 115, 9));
+    height: 30vw;
+    position: absolute;
+    width: 30vw;
+    border-radius: 50%;
+    filter: blur(25px);
+    animation-name: anime1;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes anime1 {
+    from {
+        transform: translate(55%, -3%);
+    }
+
+    to {
+        transform: translate(0%, 10%);
+    }
+}
+
+@keyframes anime2 {
+    from {
+        transform: translate(5%, -5%);
+    }
+
+    to {
+        transform: translate(-20%, 30%);
+    }
+}
+
+/*START OF PAGE 2*/
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    background-color: black;
+    padding: 8vw 0;
+    position: relative;
+}
+#moving-text{
+white-space: nowrap;
+overflow-x: auto;
+}
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+#moving-text h1{
+    font-size: 8vw;
+
+    display: inline-block;
+}
+.gola{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: #28d228;
+    display: inline-block;
+    margin: 0.5vw 2vw;
+
+}
+.con{
+    display: inline-block;
+    white-space:nowrap;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function: linear; 
+    animation-iteration-count: infinite;
+}
+@keyframes move {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform:translateX(-100%);
+    }
+}
+
+#page2-bottom{
+    min-height: 80vh;
+    width: 100%;
+    /* background-color: lightblue; */
+    padding: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 9;
+}
+#page2-bottom h1{
+    font-size: 3.5vw;
+    width: 50%;
+}
+#bottom-part2{
+    width: 40%;
+}
+#bottom-part2 img{
+    height: 450px;
+    width: 450px;
+    border-radius: 10px;
+    
+}
+#bottom-part2 img:hover{
+    box-shadow: -8px 5px 86px 28px rgba(40,210,40,1);
+    -webkit-box-shadow: -8px 5px 86px 28px rgba(40,210,40,1);
+    -moz-box-shadow: -8px 5px 86px 28px rgba(40,210,40,1);
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;  
+}
+#page2 #gooey{
+    height: 32vw;
+    width: 32vw;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to top,#255d25,#31eb31);
+    top: 60%;
+    right: 50%;
+    filter: blur(20px);
+    z-index: -1;
+    animation-name: gooey;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes gooey {
+    from{
+        transform: translate(10%,-10%) skew(0);
+    }
+    to{
+        transform: translate(-10%,10%) skew(-12deg);
+    }
+}
+
+
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    background: #000;
+    padding: 4vw 0;
+}
+.elem{
+    height: 150px;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.308);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+}
+.elem h2{
+    font-size: 3vw;
+    position: relative;
+    z-index: 9;
+}
+.elem .overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #28d228;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease-in 0.2s;
+}
+.elem:hover .overlay{
+    top: 0;
+}
+
+
+
+
+
+ 
+
